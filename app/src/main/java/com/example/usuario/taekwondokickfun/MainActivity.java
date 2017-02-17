@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         // Save the current state
-        savedInstanceState.putInt(SCORE_GIRL, scoreOfGirl);
-        savedInstanceState.putInt(SCORE_BOY, scoreOfBoy);
+        savedInstanceState.putInt(SCORE_GIRL, quantity);
+        savedInstanceState.putInt(SCORE_BOY, quantity2);
 
         // Always call the superclass so it can save the view hierarchy state
         super.onSaveInstanceState(savedInstanceState);
@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
         // Always call the superclass so it can restore the view hierarchy
         super.onRestoreInstanceState(savedInstanceState);
         // Restore state members from saved instance
-        scoreOfGirl = savedInstanceState.getInt(SCORE_GIRL);
-        scoreOfBoy = savedInstanceState.getInt(SCORE_BOY);
+        quantity = savedInstanceState.getInt(SCORE_GIRL);
+        quantity2 = savedInstanceState.getInt(SCORE_BOY);
 
     }
 
@@ -101,14 +101,23 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the given quantity of points on the counter1
      */
-    public void displayMarcadorChica(int score) {
+    public void display(int score) {
 
-        TextView marcadorA = (TextView) findViewById(R.id.marcador);
+        TextView marcador = (TextView) findViewById(R.id.marcador);
 
-        marcadorA.setText(String.valueOf(score));
+        marcador.setText(String.valueOf(score));
 
     }
+    /**
+     * This method displays the given quantity of points on the counter1
+     */
+    public void display(int score) {
 
+        TextView marcador2 = (TextView) findViewById(R.id.marcador2);
+
+        marcador2.setText(String.valueOf(score));
+
+    }
 
     public void bodyattack2(View view) {
 
