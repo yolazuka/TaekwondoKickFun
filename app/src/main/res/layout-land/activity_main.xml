@@ -1,0 +1,214 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/fondo_horizontal"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout">
+
+
+        <TextView
+            android:id="@+id/opo1"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#424242"
+            android:textStyle="bold"
+            android:gravity="fill"
+            android:paddingLeft="25dp"
+            android:textSize="18dp"
+            android:textColor="@android:color/white"
+            android:textAllCaps="true"
+            android:text="Opponent 1                                                                          Opponent2" />
+
+
+        <Button
+            style="@style/MainButton"
+            android:id="@+id/bodyattack"
+            android:layout_below="@id/opo1"
+            android:layout_marginTop="38dp"
+            android:layout_marginBottom="8dp"
+            android:onClick="bodyattack"
+            android:text="Body Attack!" />
+
+        <Button
+            style="@style/MainButton"
+            android:id="@+id/bodykick"
+            android:layout_below="@id/bodyattack"
+            android:layout_marginBottom="8dp"
+            android:onClick="bodykick"
+            android:text="Body Spin Kick!" />
+
+        <Button
+            style="@style/MainButton"
+            android:id="@+id/headattack"
+            android:layout_below="@id/bodykick"
+            android:layout_marginBottom="8dp"
+            android:onClick="headattack"
+            android:text="Head Attack!"/>
+
+        <Button
+            style="@style/RoundedButton"
+            android:id="@+id/caution"
+            android:layout_below="@id/headattack"
+            android:layout_marginLeft="22dp"
+            android:onClick="caution"
+            android:text="Caution!"/>
+
+        <Button
+            style="@style/RoundedButton"
+            android:id="@+id/botonreset"
+            android:layout_below="@id/headattack"
+            android:layout_toRightOf="@id/caution"
+            android:layout_marginLeft="15dp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:onClick="botonreset"
+            android:text="reset"/>
+
+        <TextView
+            android:id="@+id/textomarcador"
+            android:layout_toRightOf="@id/bodykick"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:paddingLeft="15dp"
+            android:gravity="fill"
+            android:text="......Here we go!!"/>
+
+
+        <ImageView
+            android:id="@+id/nina"
+            android:src="@drawable/nina_tk"
+            android:layout_width="130dp"
+            android:layout_height="110dp"
+            android:layout_below="@+id/marcador"
+            android:layout_marginLeft="150dp" />
+
+        <TextView
+            android:id="@+id/marcador"
+            android:layout_toRightOf="@id/bodyattack"
+            android:layout_marginTop="105dp"
+            android:layout_marginLeft="70dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@android:color/holo_red_light"
+            android:paddingLeft="11dp"
+            android:gravity="fill"
+            android:text="0" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <Button
+            style="@style/MainButton"
+            android:id="@+id/bodyattack2"
+            android:layout_below="@id/opo1"
+            android:layout_marginTop="83dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/bodyattack"
+            android:layout_marginBottom="8dp"
+            android:onClick="bodyattack2"
+            android:text="Body Attack!" />
+
+        <Button
+            style="@style/MainButton"
+            android:id="@+id/bodykick2"
+            android:layout_below="@id/bodyattack2"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:onClick="bodykick2"
+            android:text="Body Spin Kick!" />
+
+        <Button
+            style="@style/MainButton"
+            android:id="@+id/headattack2"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/bodykick2"
+            android:layout_marginBottom="8dp"
+            android:onClick="headattack2"
+            android:text="Head Attack!"/>
+
+        <Button
+            style="@style/RoundedButton"
+            android:id="@+id/caution2"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="83dp"
+            android:layout_below="@id/headattack2"
+            android:onClick="caution2"
+            android:text="Caution!"/>
+
+        <Button
+            style="@style/RoundedButton"
+            android:id="@+id/botonreset2"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22dp"
+            android:layout_below="@id/headattack2"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:onClick="botonreset"
+            android:text="reset"/>
+
+        <TextView
+            android:id="@+id/textomarcador2"
+            android:layout_toLeftOf="@id/bodykick2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:paddingLeft="15dp"
+            android:gravity="fill"
+            android:text="Come on, let's get started!!" />
+
+
+        <TextView
+            android:id="@+id/marcador2"
+            android:layout_toLeftOf="@+id/bodyattack2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="42dp"
+            android:layout_marginTop="105dp"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@android:color/holo_red_light"
+            android:paddingLeft="11dp"
+            android:gravity="fill"
+            android:text="0"/>
+
+
+        <ImageView
+            android:id="@+id/nino"
+            android:src="@drawable/nino_tk"
+            android:layout_below="@id/marcador2"
+            android:layout_width="130dp"
+            android:layout_height="110dp"
+            android:layout_marginRight="140dp"
+            android:layout_alignParentRight="true" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
