@@ -1,34 +1,33 @@
 package com.example.usuario.taekwondokickfun;
 
-import android.content.Context;
-import android.content.res.TypedArray;
-import android.graphics.Typeface;
-import android.support.v7.app.AppCompatActivity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.AttributeSet;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.TextView;
-import java.text.NumberFormat;
 
-import static android.R.id.message;
-import static com.example.usuario.taekwondokickfun.R.id.bodyattack;
-import static com.example.usuario.taekwondokickfun.R.id.marcador;
-import static com.example.usuario.taekwondokickfun.R.id.marcador2;
-import static com.example.usuario.taekwondokickfun.R.id.textomarcador;
 import static com.example.usuario.taekwondokickfun.R.id.textomarcador2;
 
 public class MainActivity extends AppCompatActivity {
 
+
     private static final String SCORE_GIRL = "Score_Girl";
     private static final String SCORE_BOY = "Score_Boy";
+
+    int quantity = 0;
+    int quantity2 = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MediaPlayer mediaPlayer;
+        mediaPlayer = MediaPlayer.create(this,R.raw.chinese);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.setVolume(100,100);
+        mediaPlayer.start();
     }
 
     @Override
@@ -50,10 +49,6 @@ public class MainActivity extends AppCompatActivity {
         quantity2 = savedInstanceState.getInt(SCORE_BOY);
 
     }
-
-
-    int quantity = 0;
-    int quantity2 = 0;
 
 
     /**
@@ -109,9 +104,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
     /**
-     * This method displays the given quantity of points on the counter1
+     * This method displays the given quantity of points on the counter2
      */
-    public void display(int score) {
+    public void display2(int score) {
 
         TextView marcador2 = (TextView) findViewById(R.id.marcador2);
 
@@ -122,8 +117,8 @@ public class MainActivity extends AppCompatActivity {
     public void bodyattack2(View view) {
 
         quantity2 = quantity2 + 1;
-        display(quantity2);
-        String contadorMessage2 = "Wow, you added 1 points!" + "\n Awesome!";
+        display2(quantity2);
+        String contadorMessage2 = "Yeah boy, that was 1 point!" + "\n Awesome!";
         displayMessage2(contadorMessage2);
     }
 
@@ -132,8 +127,8 @@ public class MainActivity extends AppCompatActivity {
     public void bodykick2(View view) {
 
         quantity2 = quantity2 + 3;
-        display(quantity2);
-        String contadorMessage2 = "3 points more your counter!!" +  "\nNice!";
+        display2(quantity2);
+        String contadorMessage2 = "You won 3 superpowerful points!!" +  "\nNice!";
         displayMessage2(contadorMessage2);
     }
 
@@ -142,8 +137,8 @@ public class MainActivity extends AppCompatActivity {
     public void headattack2(View view) {
 
         quantity2 = quantity2 + 3;
-        display(quantity2);
-        String contadorMessage2 = "You are doing it really good... 3 plus points" +  "\nSuper!";
+        display2(quantity2);
+        String contadorMessage2 = "You are ace!... 3 plus points" +  "\nSuper!";
         displayMessage2(contadorMessage2);
     }
 
@@ -153,8 +148,8 @@ public class MainActivity extends AppCompatActivity {
     public void caution2(View view) {
 
         quantity2 = quantity2 - 1;
-        display(quantity2);
-        String contadorMessage2 = "Oooouch ! that was hard... 1 point is going away :(" +  "\nWatch out!";
+        display2(quantity2);
+        String contadorMessage2 = "Oooouch ! that was too hard... 1 point less >_<" +  "\nWatch out!";
         displayMessage2(contadorMessage2);
     }
 
@@ -165,12 +160,23 @@ public class MainActivity extends AppCompatActivity {
         quantity = 0;
         quantity2 = 0;
         display(quantity);
-        display(quantity2);
+        display2(quantity2);
         String contadorMessage = "LETS START AGAIN!";
         String contadorMessage2 = "LETS START AGAIN! ";
         displayMessage(contadorMessage);
         displayMessage2(contadorMessage2);
 
+    }
+
+
+    public void displayMessage2(String displayMessage2) {
+        TextView textomarcador2 = (TextView) findViewById(R.id.textomarcador2);
+        textomarcador2.setText(displayMessage2);
+    }
+
+    public void displayMessage(String displayMessage) {
+        TextView textomarcador = (TextView) findViewById(R.id.textomarcador);
+        textomarcador.setText(displayMessage);
     }
 
 }
