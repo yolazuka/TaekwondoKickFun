@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Taekwondo Kick Fun</string>
+    <string name="opponent_one">opponent 1</string>
+    <string name="opponent_two">opponent 2</string>
+    <string name="body_attack">Body Attack!</string>
+    <string name="body_spin_kick">Body Spin Kick!</string>
+    <string name="head_attack">Head Attack!</string>
+    <string name="caution">Caution!</string>
+    <string name="reset">RESET</string>
+    <string name="here_we_go">Here we go!</string>
+    <string name="come_on">Come on, let get started!</string>
+
 </resources>
